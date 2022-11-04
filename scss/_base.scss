@@ -1,0 +1,30 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 178%;
+	color: #fff;
+	background: #000;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1460px + 30px;
+	margin: 0 auto;
+	padding: 0px 15px; // отступы безопасности
+}
+
+.container--wide {
+	max-width: 1757px + 30px;
+}
+
+.main {
+	flex: 1 1 auto;
+}
