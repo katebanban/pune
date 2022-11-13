@@ -1,0 +1,42 @@
+.fort {
+	margin-top: -1204px;
+	padding-bottom: 250px;
+	position: relative;
+	z-index: 1;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__image {
+		//flex: 0 1 598px;
+		flex: 0 1 41%;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__content {
+		//flex: 0 1 632px;
+		flex: 0 1 43%;
+		padding: 87px 0px;
+
+		& > * + * {
+			margin-top: 27px;
+		}
+	}
+
+	&__subtitle {
+	}
+
+	&__title {
+	}
+
+	&__descr {
+	}
+
+	&__link {
+	}
+}

@@ -1,3 +1,9 @@
+html,
+body {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
 body {
 	font-family: "Open Sans", sans-serif;
 	font-style: normal;
@@ -27,4 +33,56 @@ body {
 
 .main {
 	flex: 1 1 auto;
+}
+
+.subtitle {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 25px / 18px * 100%;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	color: #ffc178;
+	position: relative;
+	padding-left: 104px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 72px;
+		height: 2px;
+		left: 0px;
+		top: 10px;
+		background: #ffc178;
+	}
+}
+
+.title {
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 87px / 64px * 100%;
+}
+
+.link {
+	display: inline-flex;
+	align-items: center;
+	border-bottom: 1px solid transparent;
+
+	span {
+		font-weight: 700;
+		line-height: 25px / 18px * 100%;
+		color: #fbd784;
+
+		&:not(:last-child) {
+			margin-right: 9px;
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 16px;
+	}
+
+	&:hover {
+		border-color: #fbd784;
+	}
 }
