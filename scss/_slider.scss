@@ -2,6 +2,30 @@
 	padding-bottom: 227px;
 
 	&__body {
+		.slick-arrow {
+			position: absolute;
+			top: 50%;
+			z-index: 2;
+			border: none;
+			background: transparent;
+			font-size: 0;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+		}
+
+		.slick-prev {
+			left: 30px;
+			background: url("../img/slider/prev.svg") center/cover no-repeat;
+		}
+
+		.slick-next {
+			right: 30px;
+			background: url("../img/slider/next.svg") center/cover no-repeat;
+		}
+	}
+
+	&__slide {
 		position: relative;
 		padding: 533px 0px 42px;
 	}
