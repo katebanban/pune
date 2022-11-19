@@ -333,6 +333,7 @@ svg {
 a[class] {
   text-decoration: none;
   color: inherit;
+  line-height: 1;
 }
 a[class]:active {
   color: inherit;
@@ -342,7 +343,6 @@ a[class]:active {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  line-height: 0;
 }
 
 .title-reset {
@@ -355,6 +355,24 @@ a[class]:active {
 .text-reset {
   padding: 0;
   margin: 0;
+}
+
+.input-reset {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.input-reset:focus {
+  outline: none;
+}
+
+.btn-reset {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 @font-face {
@@ -769,4 +787,37 @@ body {
 }
 .culture__image {
   flex: 0 1 40%;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-top__button {
+  display: flex;
+  align-items: center;
+}
+.footer-middle {
+  display: flex;
+}
+.footer-middle__menu {
+  display: flex;
+}
+.footer-bottom__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-bottom__info-list {
+  display: flex;
+  align-items: center;
+}
+.footer-bottom__social-list {
+  display: flex;
+  align-items: center;
+}
+.footer-bottom__social-item {
+  width: 30px;
+  height: 30px;
 }

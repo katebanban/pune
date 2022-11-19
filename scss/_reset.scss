@@ -22,6 +22,7 @@ svg {
 a[class] {
 	text-decoration: none;
 	color: inherit;
+	line-height: 1;
 
 	&:active {
 		color: inherit;
@@ -32,7 +33,6 @@ a[class] {
 	padding: 0;
 	margin: 0;
 	list-style-type: none; // убрать кружочки перед пунктами списка
-	line-height: 0;
 }
 
 .title-reset {
@@ -45,4 +45,23 @@ a[class] {
 .text-reset {
 	padding: 0;
 	margin: 0;
+}
+
+.input-reset {
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn-reset {
+	background: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
 }
