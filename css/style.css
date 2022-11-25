@@ -712,7 +712,6 @@ body {
 .first {
   position: relative;
   padding: 287px 0px 1935px;
-  margin-top: -85px;
 }
 @media (max-width: 1465px) {
   .first {
@@ -727,6 +726,7 @@ body {
 @media (max-width: 768px) {
   .first {
     padding: 125px 0px 1330px;
+    margin-top: -85px;
   }
 }
 .first__bg {

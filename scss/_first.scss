@@ -1,7 +1,6 @@
 .first {
 	position: relative;
 	padding: 287px 0px 1935px;
-	margin-top: -85px;
 
 	@media (max-width: 1465px) {
 		padding: 220px 0px 1490px;
@@ -13,6 +12,7 @@
 
 	@media (max-width: 768px) {
 		padding: 125px 0px 1330px;
+		margin-top: -85px;
 	}
 
 	&__bg {
