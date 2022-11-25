@@ -14,6 +14,10 @@ body {
 	background: #000;
 }
 
+.no-scroll {
+	overflow: hidden;
+}
+
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
@@ -25,10 +29,18 @@ body {
 	max-width: 1460px + 30px;
 	margin: 0 auto;
 	padding: 0px 15px; // отступы безопасности
+
+	@media (max-width: 1465px) {
+		max-width: 1200px;
+	}
 }
 
 .container--wide {
 	max-width: 1757px + 30px;
+
+	@media (max-width: 1465px) {
+		max-width: 1300px;
+	}
 }
 
 .main {
@@ -53,6 +65,10 @@ body {
 		left: 0px;
 		top: 10px;
 		background: #ffc178;
+
+		@media (max-width: 480px) {
+			width: 30px;
+		}
 	}
 }
 

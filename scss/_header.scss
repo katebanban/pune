@@ -6,6 +6,11 @@
 	width: 100%;
 	z-index: 55;
 
+	@media (max-width: 768px) {
+		padding: 30px 0px;
+		position: relative;
+	}
+
 	&__body {
 		display: flex;
 		align-items: center;
@@ -19,6 +24,8 @@
 		letter-spacing: 0.01em;
 		text-transform: uppercase;
 		transition: all 0.3s;
+		position: relative;
+		z-index: 5;
 
 		&:not(:last-child) {
 			margin-right: 20px;
@@ -27,11 +34,23 @@
 		&:hover {
 			transform: scale(1.1);
 		}
+
+		@media (max-width: 768px) {
+			order: 1;
+		}
 	}
 
 	&__menu {
 		&:not(:last-child) {
 			margin-right: 20px;
+
+			@media (max-width: 768px) {
+				margin-right: unset;
+			}
+		}
+
+		@media (max-width: 768px) {
+			order: 3;
 		}
 	}
 
@@ -43,9 +62,19 @@
 		line-height: 23px / 17px * 100%;
 		opacity: 0.7;
 		transition: all 0.3s;
+		position: relative;
+		z-index: 5;
 
 		&:hover {
 			opacity: 1;
+		}
+
+		@media (max-width: 768px) {
+			margin-left: auto;
+			order: 2;
+			span {
+				display: none;
+			}
 		}
 	}
 
@@ -56,18 +85,115 @@
 		&:not(:last-child) {
 			margin-right: 14px;
 		}
+
+		@media (max-width: 768px) {
+			width: 25px;
+			height: 25px;
+		}
 	}
 }
 
 .menu {
+	&__btn {
+		background: transparent;
+		border: none;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		width: 30px;
+		height: 25px;
+		display: none;
+		position: relative;
+		z-index: 5;
+
+		@media (max-width: 768px) {
+			display: block;
+		}
+
+		span {
+			width: 100%;
+			height: 2px;
+			background: rgb(255, 255, 255);
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: all 0.3s;
+		}
+
+		&::before {
+			content: "";
+			width: 100%;
+			height: 2px;
+			background: rgb(255, 255, 255);
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: all 0.3s;
+		}
+
+		&::after {
+			content: "";
+			width: 100%;
+			height: 2px;
+			background: rgb(255, 255, 255);
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transition: all 0.3s;
+		}
+	}
+
+	&__btn--active {
+		span {
+			opacity: 0;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+			top: 50%;
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+			top: 50%;
+			bottom: unset;
+		}
+	}
+
 	&__list {
 		display: flex;
 		align-items: center;
+
+		@media (max-width: 768px) {
+			//display: none;
+			flex-direction: column;
+			position: absolute;
+			right: -100%;
+			top: 0;
+			width: 100%;
+			padding: 110px 0px 30px;
+			background: #000;
+			min-height: 100vh;
+			overflow: auto; //чтобы появился скролл при большом кол-ве пунктов меню
+			transition: right 0.3s;
+		}
+	}
+
+	&__list--active {
+		right: 0;
 	}
 
 	&__item {
 		&:not(:last-child) {
 			margin-right: 50px;
+
+			@media (max-width: 768px) {
+				margin-right: unset;
+				margin-bottom: 15px;
+			}
 		}
 	}
 
