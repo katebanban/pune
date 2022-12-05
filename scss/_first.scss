@@ -146,14 +146,6 @@
 		&:not(:last-child) {
 			margin-bottom: 32px;
 		}
-
-		@media (max-width: 768px) {
-			font-size: 16px;
-		}
-
-		@media (max-width: 480px) {
-			padding-left: 45px;
-		}
 	}
 
 	&__title {
