@@ -1,6 +1,10 @@
 .culture {
 	padding-bottom: 250px;
 
+	@media (max-width: 1000px) {
+		padding-bottom: 125px;
+	}
+
 	&__body {
 		display: flex;
 		justify-content: space-between;
@@ -34,5 +38,9 @@
 
 	&__image {
 		flex: 0 1 40%;
+
+		//@media (max-width: 1465px) {
+		//	flex: 0 1 50%;
+		//}
 	}
 }

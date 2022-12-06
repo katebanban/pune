@@ -8,6 +8,10 @@
 		padding-bottom: 125px;
 	}
 
+	@media (max-width: 480px) {
+		padding-bottom: 80px;
+	}
+
 	&__body {
 		display: flex;
 		justify-content: space-between;
